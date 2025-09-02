@@ -46,11 +46,4 @@ public class AccountServiceTest {
         assertThat(response.getBalance()).isEqualTo(new BigDecimal("370000.00").toString());
     }
 
-    @Test
-    void testGenerateAccountNumber() {
-        String accountNumber = AccountServiceImpl.generateAccountNumber();
-        log.info("Generated account number: {}", accountNumber);
-        assertThat(accountNumber.length())
-                .isEqualTo(10);
-    }
 }

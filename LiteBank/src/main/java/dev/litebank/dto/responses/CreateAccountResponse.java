@@ -1,5 +1,6 @@
 package dev.litebank.dto.responses;
 
+import dev.litebank.dto.AccountType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class CreateAccountResponse {
     private String id;
-    private String username;
-    private String name;
     private String accountNumber;
+    private String accountHolderName;
+    private AccountType accountType;
 }
