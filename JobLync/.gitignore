@@ -1,48 +1,7 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
-
-# Ignore Spring Boot config files with sensitive data
-src/main/resources/application.properties
-src/main/resources/application-*.properties
-!src/main/resources/application.properties.example
-
-# Additional files and directories that should be ignored
-
 # Compiled class file
 *.class
 
-# Log files
+# Log file
 *.log
 
 # BlueJ files
@@ -60,30 +19,88 @@ src/main/resources/application-*.properties
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://openjdk.java.net/groups/hotspot/docs/Serviceability.html
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# Eclipse IDE
-.metadata/
+# Eclipse
+.settings/
+.project
+.classpath
+*.launch
+*.tmp
+.metadata
 
-# macOS
-.DS_Store
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
 
-# Windows
-Thumbs.db
+# NetBeans
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# Environment files
+# VS Code
+.vscode/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.bin
+build/
+.gradle
+.gradle/
+
+# Application configuration files
+application-*.properties
+application-*.yml
 .env
 .env.local
 .env.*.local
 
-# Database files
-*.sql
-
-# Temporary files
-*.tmp
-*.temp
-
-# IDE specific files
+# IDE
 *.swp
 *.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Spring Boot
+HELP.md
+mvnw
+mvnw.cmd
+.mvn/wrapper
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Exception for setup scripts - they should be committed
+!setup-env.ps1
+!setup-env.sh
