@@ -1,0 +1,49 @@
+# Database Configuration
+spring.datasource.url=jdbc:postgresql://localhost:5432/joblync?connectTimeout=5&socketTimeout=30&tcpKeepAlive=true&ssl=false
+spring.datasource.username=your_database_username
+spring.datasource.password=your_database_password
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA/Hibernate Properties
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# Server Configuration
+server.port=8080
+
+# JWT Configuration
+jwt.secret=your_jwt_secret_key
+jwt.expiration=86400000
+
+# Mail Configuration
+# For development, you can use console output by setting:
+# spring.mail.host=localhost
+# spring.mail.port=25
+
+# For production, use one of the following SMTP providers:
+
+# Gmail SMTP configuration:
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your-email@gmail.com
+spring.mail.password=your-app-password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+# SendGrid SMTP configuration:
+#spring.mail.host=smtp.sendgrid.net
+#spring.mail.port=587
+#spring.mail.username=apikey
+#spring.mail.password=your-sendgrid-api-key
+#spring.mail.properties.mail.smtp.auth=true
+#spring.mail.properties.mail.smtp.starttls.enable=true
+
+# Twilio SendGrid (alternative method):
+# If using Twilio SendGrid, you can also use their Java library directly
+# Add this dependency to your pom.xml:
+# <dependency>
+#     <groupId>com.sendgrid</groupId>
+#     <artifactId>sendgrid-java</artifactId>
+#     <version>4.9.3</version>
+# </dependency>
